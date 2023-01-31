@@ -1,0 +1,11 @@
+<div class="flex flex-col">  
+  <h1>Understanding 'yield' and 'content_for'</h1>
+
+  <% content_for :greet do %>
+    <p class="">Hello, Rails!</p>
+  <% end %>  
+
+  <div class="self-center text-red-500">  
+    <%= yield :greet %>
+  </div>  
+</div>
