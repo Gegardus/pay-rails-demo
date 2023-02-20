@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,13 +11,15 @@
     <% content_for :head do %>
       <title>A simple page</title>
     <% end %>  
-    <%= yield :head %> 
+    <%= yield :head %>     
   </head>
 
   <body class="grid justify-items-center flex h-screen flex-col bg-gray-200 text-weight-900">
-   <div class="self-end mx-auto text-cyan-600">
-     <%= yield :greet %>
-   </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="self-end mx-auto text-cyan-600">
+      <%= yield :greet %>
+    </div>
 
     <div class="m-auto">         
       <%= yield %>
